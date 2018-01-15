@@ -58,6 +58,7 @@ def authors():
     return render_template('routing/authors.html')
 
 
+# string token: flask check if given input is string or not
 @app.route('/author/<string:authors_last_name>')
 def author(authors_last_name):
     if authors_last_name not in AUTHORS_INFO:
